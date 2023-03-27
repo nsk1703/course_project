@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewRecipes()">New Recipes</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+        <!-- Ici list 'parent', envoie au fils 'app-recipe-item' qui recoit par le @Input '[recipe]' -->
+       <app-recipe-item
+        *ngFor="let rec of listRecipes; let i = index"
+        [recipe]="rec"
+        [index]="i"
+        >
+        </app-recipe-item>
+    </div>
+</div>

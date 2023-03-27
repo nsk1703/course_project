@@ -1,0 +1,28 @@
+// export interface IAccount {
+
+//     id: string;
+//     email: string;
+//     _token: string;
+//     _tokenExpiration: Date;
+// }
+
+export class Account{
+
+    
+    constructor(
+        public id: string,
+        public email: string,
+        private _token: string,
+        private _tokenExpirationDate: Date,
+
+    ){}
+
+    get token(){
+        if(!this._tokenExpirationDate || new Date() > this._tokenExpirationDate){
+            return null;
+        }
+
+        return this._token;
+    }
+}
+

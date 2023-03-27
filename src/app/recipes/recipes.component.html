@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <!-- Ici s'affiche tous les composants fils dans le routing de recipes -->
+        <!-- <app-recipe-detail 
+            *ngIf="selectedRecipe; else recipe"
+            [recipe]="selectedRecipe">
+        </app-recipe-detail> -->
+        <router-outlet></router-outlet>
+    </div>
+</div>
